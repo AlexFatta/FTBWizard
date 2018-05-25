@@ -68,7 +68,7 @@ public class CheckModPackFolder {
 				e.printStackTrace();
 			}
 			
-			downloadBuild("https://feedthewish.fr/Modpack/Saison4/mods.zip", minecraftPath + "/Modpack/FeedTheWishS4/mods.zip", 2048);
+			downloadBuild("hiddenLink", minecraftPath + "/Modpack/FeedTheWishS4/mods.zip", 2048);
 			
 			progressBar.setValue(30);
 
@@ -90,7 +90,7 @@ public class CheckModPackFolder {
 		InputStream in = httpConn.getInputStream();
 		FileOutputStream out = new FileOutputStream(minecraftPath + "/Modpack/FeedTheWishS4/mods.zip");
 		
-		out.getChannel().transferFrom(Channels.newChannel(new URL("https://feedthewish.fr/Modpack/Saison4/mods.zip").openStream()), 0, Long.MAX_VALUE);
+		out.getChannel().transferFrom(Channels.newChannel(new URL("hiddenLink").openStream()), 0, Long.MAX_VALUE);
 
 		try {
 			byte buffer[] = new byte[bufferSize];
